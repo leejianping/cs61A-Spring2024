@@ -32,7 +32,8 @@ Mastery of a particular programming language is a very useful side effect of CS 
 ## Contents
 
 ### Video
-- [cs61a videos ](https://www.bilibili.com/video/BV1wSTUeJEwK/?spm_id_from=333.337.search-card.all.click&vd_source=2e51af461f4b6541078245c8e98d9f3a)
+- [cs61a videos spring 2024 link](https://www.bilibili.com/video/BV1wSTUeJEwK/?spm_id_from=333.337.search-card.all.click&vd_source=2e51af461f4b6541078245c8e98d9f3a)
+
 - [23fall  lecture 1 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYXRvFO4WhqFlk3CN5Fy-aM4)
 - [23fall  lecture 2-4 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYWZlcJMOuWFSXKc99cSneEN)
 - [23fall  lecture 5 ](https://www.youtube.com/watch?v=9122neGpcS8&list=PL6BsET-8jgYVc8wS_O6hsmwFiTi7NypvD)
@@ -137,9 +138,10 @@ Mastery of a particular programming language is a very useful side effect of CS 
 
 ## Links
 
-- [Course Website (2024 Summar)](https://cs61a.org/)
 - [spring 2022 lab-hw-project](https://github.com/caiscoding/CS61A-Spring2022)
 - [Fall 2020 website](https://web.archive.org/web/20210104105406/https://cs61a.org/)
+
+- [Course Website (2024 Summar)](https://cs61a.org/)
 - [Vanshaj's Guide (Summer 2020)](https://cs61a.vanshaj.dev/welcome/)
 - [Textbook (SICP for python)](http://composingprograms.com/)
 - [Online editor (support scheme, SQL and python)](https://code.cs61a.org/)
