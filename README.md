@@ -8,7 +8,9 @@ Update: 2024--06--20
 
 This is my repository for lab, homeworks and project when going through the course, CS 61A, Spring 2024, from U.C. Berkeley.
 Since the course page change to summar 2024. Some of halfway learners have to stop learning for unable to access to the spring 2024 website.
-Hope this repository will help you.
+Hope this repository will help you. 
+
+We welcome contributions to this repository.
 
 > **Warning**
 > This repository contains codes for tasks of CS 61A, so please be careful about not viloating the course's policies and not copy-pasting these codes.
@@ -28,6 +30,13 @@ CS 61A primarily uses the Python 3 programming language. Python is a popular lan
 Mastery of a particular programming language is a very useful side effect of CS 61A. However, our goal is not to dictate what language you use in your future endeavors. Instead, our hope is that once you have learned the concepts involved in programming, you will find that picking up a new programming language is but a few days' work.
 
 ## Contents
+
+### Video
+ -[cs61a videos 1](https://www.bilibili.com/video/BV1wSTUeJEwK/?spm_id_from=333.337.search-card.all.click&vd_source=2e51af461f4b6541078245c8e98d9f3a)
+
+  -[23fall lecture 1 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYXRvFO4WhqFlk3CN5Fy-aM4)
+  -[23fall lecture 2-4 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYWZlcJMOuWFSXKc99cSneEN)
+   -[23fall lecture 5 ](https://www.youtube.com/watch?v=9122neGpcS8&list=PL6BsET-8jgYVc8wS_O6hsmwFiTi7NypvD)
 
 ### Homeworks
 
@@ -129,6 +138,7 @@ Mastery of a particular programming language is a very useful side effect of CS 
 
 - [Course Website (2024 Summar)](https://cs61a.org/)
 - [spring 2022 lab-hw-project](https://github.com/caiscoding/CS61A-Spring2022)
+- [Fall 2020 website](https://web.archive.org/web/20210104105406/https://cs61a.org/)
 - [Vanshaj's Guide (Summer 2020)](https://cs61a.vanshaj.dev/welcome/)
 - [Textbook (SICP for python)](http://composingprograms.com/)
 - [Online editor (support scheme, SQL and python)](https://code.cs61a.org/)
