@@ -10,7 +10,7 @@ This is my repository for lab, homeworks and project when going through the cour
 Since the course page change to summar 2024. Some of halfway learners have to stop learning for unable to access to the spring 2024 website.
 Hope this repository will help you. 
 
-We welcome contributions to this repository.
+**We welcome contributions to this repository.**
 
 > **Warning**
 > This repository contains codes for tasks of CS 61A, so please be careful about not viloating the course's policies and not copy-pasting these codes.
@@ -32,11 +32,12 @@ Mastery of a particular programming language is a very useful side effect of CS 
 ## Contents
 
 ### Video
- -[cs61a videos 1](https://www.bilibili.com/video/BV1wSTUeJEwK/?spm_id_from=333.337.search-card.all.click&vd_source=2e51af461f4b6541078245c8e98d9f3a)
+- [cs61a videos ](https://www.bilibili.com/video/BV1wSTUeJEwK/?spm_id_from=333.337.search-card.all.click&vd_source=2e51af461f4b6541078245c8e98d9f3a)
+- [23fall  lecture 1 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYXRvFO4WhqFlk3CN5Fy-aM4)
+- [23fall  lecture 2-4 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYWZlcJMOuWFSXKc99cSneEN)
+- [23fall  lecture 5 ](https://www.youtube.com/watch?v=9122neGpcS8&list=PL6BsET-8jgYVc8wS_O6hsmwFiTi7NypvD)
 
-  -[23fall lecture 1 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYXRvFO4WhqFlk3CN5Fy-aM4)
-  -[23fall lecture 2-4 ](https://www.youtube.com/watch?v=0P4kOL7pFFo&list=PL6BsET-8jgYWZlcJMOuWFSXKc99cSneEN)
-   -[23fall lecture 5 ](https://www.youtube.com/watch?v=9122neGpcS8&list=PL6BsET-8jgYVc8wS_O6hsmwFiTi7NypvD)
+     
 
 ### Homeworks
 
