@@ -120,6 +120,9 @@ Mastery of a particular programming language is a very useful side effect of CS 
    
 - [Project 5: Optional Contest: Scheme Art](./project/project5/)
 
+## Schedule
+
+![schedule](schedule.png)
 
 
 ## Links
