@@ -145,6 +145,11 @@ If you get stuck while answering these questions, you can try reading through `a
 ### Problem 1 (1 pt)[​](https://www.learncs.site/docs/curriculum-resource/cs61a/project/ants#problem-1-1-pt "Direct link to Problem 1 (1 pt)")
 
 **Part A**: Currently, there is no cost for placing any type of `Ant`, and so there is no challenge to the game. The base class `Ant` has a `food_cost` of zero. Override this class attribute for `HarvesterAnt` and `ThrowerAnt` according to the "Food Cost" column in the table below.
+|Class|	Food Cost|	Initial Health|
+|---  |---       |---             |
+|![alt text](image.png)HarvesterAnt | 2 |	 1 |
+|![alt text](image-1.png)  ThrowerAnt |  3  |	1 |
+
 
 **Part B**: Now that placing an `Ant` costs food, we need to be able to gather more food! To fix this issue, implement the `HarvesterAnt` class. A `HarvesterAnt` is a type of `Ant` that adds one food to the `gamestate.food` total as its `action`.
 
@@ -256,6 +261,10 @@ A `ThrowerAnt` is a powerful threat to the bees, but it has a high food cost. In
 *   The `ShortThrower` can only `throw_at` a `Bee` that is found after following at most 3 `entrance` transitions. It cannot throw at any bees further than 3 `Place`s in front of it.
 
 Neither of these specialized throwers can `throw_at` a `Bee` that is exactly 4 `Place`s away.
+|Class|	Food Cost	|Initial Health|
+|---|---|---|
+|ShortThrower|2|	1|
+|LongThrower|2|	1|
 
 To implement these new throwing ants, your `ShortThrower` and `LongThrower` classes should inherit the `nearest_bee` method from the base `ThrowerAnt` class. The logic of choosing which bee a thrower ant will attack is the same, except the `ShortThrower` and `LongThrower` ants where their range is limited by a lower and upper bound, respectively.
 
@@ -300,18 +309,9 @@ However, your method needs to also include the reflective damage logic:
 
 > **Important:** Remember that when any `Ant` loses all its health, it is removed from its `place`, so pay careful attention to the order of your logic in `reduce_health`.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Fire.gif)  
-`FireAnt`
-
-5
-
-3
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|![](https://www.learncs.site/img/cs61a/Fire.gif)  `FireAnt`|5|3|
 
 > _Hint:_ Damaging a bee may cause it to be removed from its place. If you iterate over a list, but change the contents of that list at the same time, you [may not visit all the elements](https://docs.python.org/3/tutorial/controlflow.html#for-statements). This can be prevented by making a copy of the list. You can either use a list slice, or use the built-in `list` function to make sure we do not affect the original list.
 
@@ -337,18 +337,9 @@ You can also test your program by playing a game or two! A `FireAnt` should dest
 
 We are going to add some protection to our glorious home base by implementing the `WallAnt`, an ant that does nothing each turn. A `WallAnt` is useful because it has a large `health` value.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Wall.gif)  
-`WallAnt`
-
-4
-
-4
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|`WallAnt`![](https://www.learncs.site/img/cs61a/Wall.gif)  |4|4|
 
 Unlike with previous ants, we have not provided you with a class statement. Implement the `WallAnt` class from scratch. Give it a class attribute `name` with the value `'Wall'` (so that the graphics work) and a class attribute `implemented` with the value `True` (so that you can use it in a game).
 
@@ -370,18 +361,9 @@ We have not provided you with a class header. Implement the `HungryAnt` class fr
 
 > _Hint:_ When a `Bee` is eaten, its health should be reduced by its health.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Hungry.gif)  
-`HungryAnt`
-
-4
-
-1
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|![](https://www.learncs.site/img/cs61a/Hungry.gif)  `HungryAnt`|4|1|
 
 Give `HungryAnt` a `chewing_turns` **class** attribute that stores the number of turns that it will take a `HungryAnt` to chew (set to 3). Also, give each `HungryAnt` an **instance** attribute `turns_to_chew` that counts the number of turns it has left to chew, initialized to 0, since it hasn't eaten anything at the beginning. You can also think of `turns_to_chew` as the number of turns until a `HungryAnt` can eat another `Bee`.
 
@@ -403,18 +385,9 @@ Once you are done unlocking, begin implementing your solution. You can check you
 
 Right now, our ants are quite frail. We'd like to provide a way to help them last longer against the onslaught of the bees. Enter the `BodyguardAnt`.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Bodyguard.gif)  
-`BodyguardAnt`
-
-4
-
-2
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|`BodyguardAnt`![](https://www.learncs.site/img/cs61a/Bodyguard.gif)|4|2|
 
 To implement the `BodyguardAnt`, we will break up this problem into 3 subparts. In each part, we will making changes in either the `ContainerAnt` class, `Ant` class, or `BodyguardAnt` class.
 
@@ -482,18 +455,9 @@ Once you are done unlocking, begin implementing your solution. You can check you
 
 The `BodyguardAnt` provides great defense, but they say the best defense is a good offense. The `TankAnt` is a `ContainerAnt` that protects an ant in its place and also deals 1 damage to all bees in its place each turn. Like any `ContainerAnt`, a `TankAnt` allows the ant that it contains to perform its action each turn.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Tank.gif)  
-`TankAnt`
-
-6
-
-2
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|![](https://www.learncs.site/img/cs61a/Tank.gif) `TankAnt`|6|2|
 
 We have not provided you with a class header. Implement the `TankAnt` class from scratch. Give it a class attribute `name` with the value `'Tank'` (so that the graphics work) and a class attribute `implemented` with the value `True` (so that you can use it in a game).
 
@@ -554,18 +518,9 @@ Once you've finished this problem, play a game that includes water. To access th
 
 Currently there are no ants that can be placed on `Water`. Implement the `ScubaThrower`, which is a subclass of `ThrowerAnt` that is more costly and waterproof, _but otherwise identical to its base class_. A `ScubaThrower` should not lose its health when placed in `Water`.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Scuba.gif)  
-`ScubaThrower`
-
-6
-
-1
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|![](https://www.learncs.site/img/cs61a/Scuba.gif)  `ScubaThrower`|6|1|
 
 We have not provided you with a class header. Implement the `ScubaThrower` class from scratch. Give it a class attribute `name` with the value `'Scuba'` (so that the graphics work) and remember to set the class attribute `implemented` with the value `True` (so that you can use it in a game).
 
@@ -583,18 +538,9 @@ Finally, implement the `QueenAnt`. A queen is a `ThrowerAnt` that inspires her f
 
 > Note: The reflected damage of a `FireAnt` should not be doubled, only the extra damage it deals when its health is reduced to 0.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Queen.gif)  
-`QueenAnt`
-
-7
-
-1
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|![](https://www.learncs.site/img/cs61a/Queen.gif)  `QueenAnt`|7|1|
 
 However, with great power comes great responsibility. If a queen ever has its health reduced to 0, the ants lose. You will need to override `Insect.reduce_health` in `QueenAnt` and call `ants_lose()` in that case in order to signal to the simulator that the game is over. (The ants also still lose if any bee reaches the end of a tunnel.)
 
@@ -623,18 +569,9 @@ Optional Problems[​](https://www.learncs.site/docs/curriculum-resource/cs61a/p
 
 Implement the `NinjaAnt`, which damages all `Bee`s that pass by, but can never be stung.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Ninja.gif)  
-`NinjaAnt`
-
-5
-
-1
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+|![](https://www.learncs.site/img/cs61a/Ninja.gif)  `NinjaAnt`|5|1|
 
 A `NinjaAnt` does not block the path of a `Bee` that flies by. To implement this behavior, first modify the `Ant` class to include a new class attribute `blocks_path` that is set to `True`, then override the value of `blocks_path` to `False` in the `NinjaAnt` class.
 
@@ -660,18 +597,9 @@ For a challenge, try to win a game using only `HarvesterAnt` and `NinjaAnt`.
 
 We've been developing this ant for a long time in secret. It's so dangerous that we had to lock it in the super hidden CS61A underground vault, but we finally think it is ready to go out on the field. In this problem, you'll be implementing the final ant -- `LaserAnt`, a `ThrowerAnt` with a twist.
 
-**Class**
-
-**Food Cost**
-
-**Initial Health**
-
-![](https://www.learncs.site/img/cs61a/Laser.gif)  
-`LaserAnt`
-
-10
-
-1
+|**Class**|**Food Cost**|**Initial Health**|
+|---|---|---|
+![](https://www.learncs.site/img/cs61a/Laser.gif)  `LaserAnt`|10|1|
 
 The `LaserAnt` shoots out a powerful laser, damaging all that dare to stand in its path. Both `Bee`s and `Ant`s, of all types, are at risk of being damaged by `LaserAnt`. When a `LaserAnt` takes its action, it will damage all `Insect`s in its place (excluding itself, but including its container if it has one) and the `Place`s in front of it, excluding the `Hive`.
 

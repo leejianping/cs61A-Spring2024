@@ -31,7 +31,12 @@ Some objects in Python, such as lists and dictionaries, are **mutable**, meaning
 
 The two most common mutation operations for lists are item assignment and the `append` method.
 
-    >>> s = [1, 3, 4]>>> t = s  # A second name for the same list>>> t[0] = 2  # this changes the first element of the list to 2, affecting both s and t>>> s[2, 3, 4]>>> s.append(5)  # this adds 5 to the end of the list, affecting both s and t>>> t[2, 3, 4, 5]
+    >>> s = [1, 3, 4]
+    >>> t = s  # A second name for the same list
+    >>> t[0] = 2  # this changes the first element of the list to 2, affecting both s and t
+    >>> s[2, 3, 4]
+    >>> s.append(5)  # this adds 5 to the end of the list, affecting both s and t
+    >>> t[2, 3, 4, 5]
 
 There are many other list mutation methods:
 
@@ -44,7 +49,15 @@ There are many other list mutation methods:
 
 Dictionaries also have item assignment (often used) and `pop` (rarely used).
 
-    >>> d = {2: 3, 4: 16}>>> d[2] = 4>>> d[3] = 9>>> d{2: 4, 4: 16, 3: 9}>>> d.pop(4)16>>> d{2: 4, 3: 9}
+    >>> d = {2: 3, 4: 16}
+    >>> d[2] = 4
+    >>> d[3] = 9
+    >>> d
+    {2: 4, 4: 16, 3: 9}
+    >>> d.pop(4)
+    16
+    >>> d
+    {2: 4, 3: 9}
 
 ### Q1: WWPD: List-Mutation[​](https://www.learncs.site/docs/curriculum-resource/cs61a/lab/lab01#q1-wwpd-list-mutation "Direct link to Q1: WWPD: List-Mutation")
 
@@ -54,7 +67,39 @@ Dictionaries also have item assignment (often used) and `pop` (rarely used).
 > 
 >     python3 ok -q list-mutation -u
 
-    >>> s = [6, 7, 8]>>> print(s.append(6))______None>>> s______[6, 7, 8, 6]>>> s.insert(0, 9)>>> s______[9, 6, 7, 8, 6]>>> x = s.pop(1)>>> s______[9, 7, 8, 6]>>> s.remove(x)>>> s______[9, 7, 8]>>> a, b = s, s[:]>>> a is s______True>>> b == s______True>>> b is s______False>>> a.pop()______8>>> a + b______[9, 7, 9, 7, 8]>>> s = [3]>>> s.extend([4, 5])>>> s______[3, 4, 5]>>> a______[9, 7]>>> s.extend([s.append(9), s.append(10)])>>> s______[3, 4, 5, 9, 10, None, None]
+    >>> s = [6, 7, 8]
+    >>> print(s.append(6))
+    ______None
+    >>> s_
+    _____[6, 7, 8, 6]
+    >>> s.insert(0, 9)
+    >>> s
+    ______[9, 6, 7, 8, 6]
+    >>> x = s.pop(1)
+    >>> s
+    ______[9, 7, 8, 6]
+    >>> s.remove(x)
+    >>> s
+    ______[9, 7, 8]
+    >>> a, b = s, s[:]
+    >>> a is s
+    ______True
+    >>> b == s
+    ______True
+    >>> b is s
+    ______False
+    >>> a.pop()
+    ______8
+    >>> a + b
+    ______[9, 7, 9, 7, 8]
+    >>> s = [3]>>> s.extend([4, 5])
+    >>> s
+    ______[3, 4, 5]
+    >>> a
+    ______[9, 7]
+    >>> s.extend([s.append(9), s.append(10)])
+    >>> s
+    ______[3, 4, 5, 9, 10, None, None]
 
 ### Q2: Insert Items[​](https://www.learncs.site/docs/curriculum-resource/cs61a/lab/lab01#q2-insert-items "Direct link to Q2: Insert Items")
 
@@ -64,7 +109,29 @@ Write a function which takes in a list `s`, a value `before`, and a value `after
 
 > **Note:** If the values passed into `before` and `after` are equal, make sure you're not creating an infinitely long list while iterating through it. If you find that your code is taking more than a few seconds to run, the function may be in an infinite loop of inserting new values.
 
-    def insert_items(s, before, after):    """Insert after into s after each occurrence of before and then return s.    >>> test_s = [1, 5, 8, 5, 2, 3]    >>> new_s = insert_items(test_s, 5, 7)    >>> new_s    [1, 5, 7, 8, 5, 7, 2, 3]    >>> test_s    [1, 5, 7, 8, 5, 7, 2, 3]    >>> new_s is test_s    True    >>> double_s = [1, 2, 1, 2, 3, 3]    >>> double_s = insert_items(double_s, 3, 4)    >>> double_s    [1, 2, 1, 2, 3, 4, 3, 4]    >>> large_s = [1, 4, 8]    >>> large_s2 = insert_items(large_s, 4, 4)    >>> large_s2    [1, 4, 4, 8]    >>> large_s3 = insert_items(large_s2, 4, 6)    >>> large_s3    [1, 4, 6, 4, 6, 8]    >>> large_s3 is large_s    True    """    "*** YOUR CODE HERE ***"
+    def insert_items(s, before, after):    
+    """Insert after into s after each occurrence of before and then return s.    
+    >>> test_s = [1, 5, 8, 5, 2, 3]    
+    >>> new_s = insert_items(test_s, 5, 7)    
+    >>> new_s    
+    [1, 5, 7, 8, 5, 7, 2, 3]    
+    >>> test_s    
+    [1, 5, 7, 8, 5, 7, 2, 3]    
+    >>> new_s is test_s    
+    True    
+    >>> double_s = [1, 2, 1, 2,  3, 3]    
+    >>> double_s = insert_items(double_s, 3, 4)    
+    >>> double_s    
+    [1, 2, 1, 2, 3, 4, 3, 4]    
+    >>> large_s = [1, 4, 8]    
+    >>> large_s2 = insert_items(large_s, 4, 4)    
+    >>> large_s2    
+    [1, 4, 4, 8]    
+    >>> large_s3 = insert_items(large_s2, 4, 6)    
+    >>> large_s3    
+    [1, 4, 6, 4, 6, 8]    
+    >>> large_s3 is large_s    True    """    
+    "*** YOUR CODE HERE ***"
 
 Use Ok to test your code:
 
@@ -75,9 +142,25 @@ Use Ok to test your code:
 Write a function that takes in a list `s` and a function `fn` and returns a dictionary.
 
 The values of the dictionary are lists of elements from `s`. Each element `e` in a list should be constructed such that `fn(e)` is the same for all elements in that list. The key for each value should be `fn(e)`. For each element `e` in s, check the value that calling `fn(e)` returns, and add `e` to the corresponding group.
+```py
+    def group_by(s, fn):    
+    """Return a dictionary of lists that together contain the elements of s.    
+    The key for each list is the value that fn returns when called on any of the    
+    values of that list.    
+    >>>group_by([12, 23, 14, 45], lambda p: p // 10)    
+    {1: [12, 14], 2: [23], 4: [45]}    
+    >>>group_by(range(-3, 4), lambda x: x * x)    
+    {9: [-3, 3], 4: [-2, 2], 1: [-1, 1], 0: [0]}    """    
+    grouped = {}    
+    for ____ in ____:        
+        key = ____        
+        if key in grouped:            
+            ____        
+        else:            
+            grouped[key] = ____ 
 
-    def group_by(s, fn):    """Return a dictionary of lists that together contain the elements of s.    The key for each list is the value that fn returns when called on any of the    values of that list.    >>> group_by([12, 23, 14, 45], lambda p: p // 10)    {1: [12, 14], 2: [23], 4: [45]}    >>> group_by(range(-3, 4), lambda x: x * x)    {9: [-3, 3], 4: [-2, 2], 1: [-1, 1], 0: [0]}    """    grouped = {}    for ____ in ____:        key = ____        if key in grouped:            ____        else:            grouped[key] = ____    return grouped
-
+    return grouped
+```
 Use Ok to test your code:
 
     python3 ok -q group_by
@@ -95,7 +178,7 @@ In general, an **iterable** is an object on which calling the built-in `iter` fu
 
 For example, a list is an iterable value.
 
-    >>> s = [1, 2, 3, 4]>>> next(s)       # s is iterable, but not an iteratorTypeError: 'list' object is not an iterator>>> t = iter(s)   # Creates an iterator>>> t<list_iterator object ...>>>> next(t)       # Calling next on an iterator1>>> next(t)       # Calling next on the same iterator2>>> next(iter(t)) # Calling iter on an iterator returns itself3>>> t2 = iter(s)>>> next(t2)      # Second iterator starts at the beginning of s1>>> next(t)       # First iterator is unaffected by second iterator4>>> next(t)       # No elements left!StopIteration>>> s             # Original iterable is unaffected[1, 2, 3, 4]
+     >>>s = [1, 2, 3, 4]>>>next(s)       # s is iterable, but not an iteratorTypeError: 'list' object is not an iterator>>> t = iter(s)   # Creates an iterator>>> t<list_iterator object ...>>>> next(t)       # Calling next on an iterator1>>> next(t)       # Calling next on the same iterator2>>> next(iter(t)) # Calling iter on an iterator returns itself3>>> t2 = iter(s)>>> next(t2)      # Second iterator starts at the beginning of s1>>> next(t)       # First iterator is unaffected by second iterator4>>> next(t)       # No elements left!StopIteration>>> s             # Original iterable is unaffected[1, 2, 3, 4]
 
 You can also use an iterator in a `for` statement because all iterators are iterable. But note that since iterators keep their state, they're only good to iterate through an iterable once:
 
@@ -127,7 +210,26 @@ Implement `count_occurrences`, which takes an iterator `t`, an integer `n`, and 
 
 > **Important**: Call `next` on `t` exactly `n` times. Assume there are at least `n` elements in `t`.
 
-    def count_occurrences(t, n, x):    """Return the number of times that x is equal to one of the    first n elements of iterator t.    >>> s = iter([10, 9, 10, 9, 9, 10, 8, 8, 8, 7])    >>> count_occurrences(s, 10, 9)    3    >>> t = iter([10, 9, 10, 9, 9, 10, 8, 8, 8, 7])    >>> count_occurrences(t, 3, 10)    2    >>> u = iter([3, 2, 2, 2, 1, 2, 1, 4, 4, 5, 5, 5])    >>> count_occurrences(u, 1, 3)  # Only iterate over 3    1    >>> count_occurrences(u, 3, 2)  # Only iterate over 2, 2, 2    3    >>> list(u)                     # Ensure that the iterator has advanced the right amount    [1, 2, 1, 4, 4, 5, 5, 5]    >>> v = iter([4, 1, 6, 6, 7, 7, 6, 6, 2, 2, 2, 5])    >>> count_occurrences(v, 6, 6)    2    """    "*** YOUR CODE HERE ***"
+    def count_occurrences(t, n, x):    
+    """Return the number of times that x is equal to one of the    
+    first n elements of iterator t.    
+    >>> s = iter([10, 9, 10, 9, 9, 10, 8, 8, 8, 7])    
+    >>> count_occurrences(s, 10, 9)    
+    3    
+    >>> t = iter([10, 9, 10, 9, 9, 10, 8, 8, 8, 7])    
+    >>> count_occurrences(t, 3, 10)    
+    2    
+    >>> u = iter([3, 2, 2, 2, 1, 2, 1, 4, 4, 5, 5, 5])    
+    >>> count_occurrences(u, 1, 3)  # Only iterate over 3    
+    1    
+    >>> count_occurrences(u, 3, 2)  # Only iterate over 2, 2, 2    
+    3    
+    >>> list(u)                     # Ensure that the iterator has advanced the right amount    
+    [1, 2, 1, 4, 4, 5, 5, 5]    
+    >>> v = iter([4, 1, 6, 6, 7, 7, 6, 6, 2, 2, 2, 5])    
+    >>> count_occurrences(v, 6, 6)    
+    2    
+    """    "*** YOUR CODE HERE ***"
 
 Use Ok to test your code:
 
@@ -190,7 +292,32 @@ If we call `sprout_leaves(t, [5, 6])`, the result is the following tree:
                 / \        
                5   6
 
-    def sprout_leaves(t, leaves):    """Sprout new leaves containing the labels in leaves at each leaf of    the original tree t and return the resulting tree.    >>> t1 = tree(1, [tree(2), tree(3)])    >>> print_tree(t1)    1      2      3    >>> new1 = sprout_leaves(t1, [4, 5])    >>> print_tree(new1)    1      2        4        5      3        4        5    >>> t2 = tree(1, [tree(2, [tree(3)])])    >>> print_tree(t2)    1      2        3    >>> new2 = sprout_leaves(t2, [6, 1, 2])    >>> print_tree(new2)    1      2        3          6          1          2    """    "*** YOUR CODE HERE ***"
+```py
+def sprout_leaves(t, leaves):    
+    """Sprout new leaves containing the labels in leaves at each leaf of    
+    the original tree t and return the resulting tree.    
+    >>> t1 = tree(1, [tree(2), tree(3)])    
+    >>> print_tree(t1)    
+    1      
+      2      
+      3    
+    >>> new1 = sprout_leaves(t1, [4, 5])    
+    >>> print_tree(new1)    
+    1     
+     2       
+      4       
+      5     
+    3        
+      4       
+      5    
+    >>> t2 = tree(1, [tree(2, [tree(3)])])    
+    >>> print_tree(t2)    
+    1      2        3    
+    >>> new2 = sprout_leaves(t2, [6, 1, 2])    
+    >>> print_tree(new2)    
+    1      2        3          6          1          2    """    
+    "*** YOUR CODE HERE ***"
+```
 
 Use Ok to test your code:
 
