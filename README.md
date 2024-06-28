@@ -121,15 +121,15 @@ Mastery of a particular programming language is a very useful side effect of CS 
 ### project
 
 
-- [Project 1: The Game of Hog](./projects/project1/)
+- [Project 1: The Game of Hog](./projects/project01/)
    
-- [Project 2: Cats](./projects/project2/)
+- [Project 2: Cats](./projects/project02/)
     
-- [Project 3: Ants Vs. SomeBees](./projects/project3/)
+- [Project 3: Ants Vs. SomeBees](./projects/project03/)
    
-- [Project 4: Scheme Interpreter](./projects/project4/)
+- [Project 4: Scheme Interpreter](./projects/project04/)
    
-- [Project 5: Optional Contest: Scheme Art](./projects/project5/)
+- [Project 5: Optional Contest: Scheme Art](./projects/project05/)
 
 ## Schedule
 
